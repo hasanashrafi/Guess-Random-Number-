@@ -1,9 +1,8 @@
-
-
+//variables
 const randomNumber = Math.ceil(Math.random() * 100);
 let numberOfGuess = 1;
 
-
+//validation number
 const validateNumber = (value) => {
     if (isNaN(value)) {
         return "please enter a valid number"
@@ -11,7 +10,7 @@ const validateNumber = (value) => {
         return "please enter number between 1 to 100"
     }
 }
-
+//guess number 
 const checkGuess = (guess) => {
     numberOfGuess++;
     console.log(numberOfGuess);
@@ -26,9 +25,9 @@ const checkGuess = (guess) => {
     }
 
 }
+
 const play = () => {
     const number = prompt("Enter Number Between 1 To 100");
-
     if (number === null) return;
     if (numberOfGuess >= 10) {
         console.log("Game Over");
